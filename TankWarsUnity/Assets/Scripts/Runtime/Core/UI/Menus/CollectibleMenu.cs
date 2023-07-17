@@ -22,16 +22,24 @@ namespace TankWars.Runtime.Core.UI.Menus
 
         public override void TransitionIn()
         {
-            CreateCollectibleButtons(); 
-
             base.TransitionIn();
         }
 
         public override void TransitionOut()
         {
-            DestroyCollectibleButtons(); 
-
             base.TransitionOut();
+        }
+
+        public override void InitializeMenu()
+        {
+            base.InitializeMenu();
+            CreateCollectibleButtons(); 
+        }
+
+        public override void TerminateMenu()
+        {
+            base.TerminateMenu();
+            DestroyCollectibleButtons(); 
         }
 
         private void CreateCollectibleButtons()
