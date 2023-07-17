@@ -43,6 +43,11 @@ namespace TankWars.Runtime.Core.UI
             foreach (BaseMenu menu in menus)
             {
                 menu.TransitionOut();
+
+                if(Application.isPlaying)
+                {
+                    menu.TerminateMenu();
+                }
             }
 
             currentMenuOpen = menus[currentMenuOpenIndex];
@@ -98,6 +103,7 @@ namespace TankWars.Runtime.Core.UI
                 case ButtonId.SHOW_MENU:
                     {
                         currentMenuOpen.TransitionOut();
+                        currentMenuOpen.TerminateMenu();
                         ShowMenuButton showMenuButton = (ShowMenuButton)data;
                         currentMenuOpen = showMenuButton.Menu;
                         currentMenuOpen.InitializeMenu(); 
@@ -119,6 +125,7 @@ namespace TankWars.Runtime.Core.UI
                 case UIEvent.OnCollectibleSelected:
                     {
                         currentMenuOpen.TransitionOut();
+                        currentMenuOpen.TerminateMenu();
                         ShowCollectibleButton showCollectibleButton = (ShowCollectibleButton)data;
                         currentMenuOpen = showCollectibleButton.CollectibleView;
                         currentMenuOpen.InitializeMenu(); 
@@ -148,6 +155,7 @@ namespace TankWars.Runtime.Core.UI
                         }
 
                         currentMenuOpen.TransitionOut();
+                        currentMenuOpen.TerminateMenu();
                         currentMenuOpen = loadingMenu;
                         currentMenuOpen.InitializeMenu(); 
                         currentMenuOpen.TransitionIn();
@@ -161,6 +169,7 @@ namespace TankWars.Runtime.Core.UI
                     {
                         LevelId currentLevel = (LevelId)data; 
                         currentMenuOpen.TransitionOut();
+                        currentMenuOpen.TerminateMenu(); 
                         //We include the BaseMenu cast since the ? operator can only return two values that are of the same type. 
                         //Here, eventhough both classes inherit from BaseMenu, the compiler asks for the same type and does not accect polymorphism as an option. 
                         currentMenuOpen = currentLevel != LevelId.NONE ? (BaseMenu)GetMenu<HeadsUpDisplay>() : (BaseMenu)GetMenu<MainMenu>();
