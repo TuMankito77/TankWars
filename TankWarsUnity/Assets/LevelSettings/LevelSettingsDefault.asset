@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2334f0d4eee66a9468488c191d6fab68, type: 3}
+  m_Name: LevelSettingsDefault
+  m_EditorClassIdentifier: 
+  lightingSettings: {fileID: 4890085278179872738, guid: a89cc3c69ab785b4dab36563d8696008, type: 2}
+  skyboxMaterial: {fileID: 2100000, guid: aa1362dea749d304bb156626e61a9895, type: 2}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e51bc04016195f4e82949f47ba3c2de, type: 3}
+  m_Name: LevelIdDatabase
+  m_EditorClassIdentifier: 
+  levelIds:
+  - MainMenu
+  - Test
+  - LockedLevelTest
+  - Launcher
+  - Level1
+  levelSceneInfo:
+  - levelId: 1
+    scene: {fileID: 102900000, guid: 012a2f1d67974d8488075d85bc126ab0, type: 3}
+    levelConfiguration: {fileID: 11400000, guid: 17aeaf05f830155479d3a38e78f34353, type: 2}
+    isUnlocked: 1
+  - levelId: 2
+    scene: {fileID: 102900000, guid: 9e05119d7dcf67849bd70c39559f0f58, type: 3}
+    levelConfiguration: {fileID: 11400000, guid: 17aeaf05f830155479d3a38e78f34353, type: 2}
+    isUnlocked: 1
+  - levelId: 5
+    scene: {fileID: 102900000, guid: d050814dd9c02624f942c605bf82c0fe, type: 3}
+    levelConfiguration: {fileID: 11400000, guid: 17aeaf05f830155479d3a38e78f34353, type: 2}
+    isUnlocked: 1
+  - levelId: 3
+    scene: {fileID: 102900000, guid: 3e7a275583c6b62428e24a58f44f729e, type: 3}
+    levelConfiguration: {fileID: 11400000, guid: 17aeaf05f830155479d3a38e78f34353, type: 2}
+    isUnlocked: 0
+  - levelId: 4
+    scene: {fileID: 102900000, guid: 91647beb12b4bfe419eb0d828cdb3457, type: 3}
+    levelConfiguration: {fileID: 11400000, guid: 17aeaf05f830155479d3a38e78f34353, type: 2}
+    isUnlocked: 0

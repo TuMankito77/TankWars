@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d6e0980a8c7c48b5c462d037311d0, type: 3}
+  m_Name: TankInfo
+  m_EditorClassIdentifier: 
+  tankInfoContainers:
+  - name: TankA
+    linkedLevelId: 2
+    mesh: {fileID: -9095796903752242740, guid: 8b821e73240bb6d47a4535f2ff98bef2, type: 3}
+    material: {fileID: 2100000, guid: 5b9ade307f59da6478b94cdfd6210241, type: 2}
+    tankPrefab: {fileID: 1570217594690013220, guid: 00822978e2631fb4c8ea73dc336b77e0, type: 3}
+    movementSpeed: 5
+    aimingSpeed: 5
+  - name: TankB
+    linkedLevelId: 2
+    mesh: {fileID: 2595751634724167739, guid: 2afd31dcf04deef4e8c409fa54d76b98, type: 3}
+    material: {fileID: 2100000, guid: 207f22eff09ad37469380098949bc709, type: 2}
+    tankPrefab: {fileID: 341678222258361352, guid: bb48520863d9e24419a4c96317852532, type: 3}
+    movementSpeed: 5
+    aimingSpeed: 5
+  - name: TankC
+    linkedLevelId: 3
+    mesh: {fileID: -8836023902212271151, guid: db030fe2ef58dc541b92dd7cf005b129, type: 3}
+    material: {fileID: 2100000, guid: 5c1b4d1dbc23a264d8b4553be4321f43, type: 2}
+    tankPrefab: {fileID: 1885787151508013890, guid: e6d36511521349c45a1c7f1a87442ed8, type: 3}
+    movementSpeed: 5
+    aimingSpeed: 5
+  - name: TankD
+    linkedLevelId: 3
+    mesh: {fileID: 4960849563956244057, guid: 40fb72818f2ecb54799f5cb841e5b878, type: 3}
+    material: {fileID: 2100000, guid: 0311f82e6f738b74391f76fd24af3bae, type: 2}
+    tankPrefab: {fileID: 2464268374845859778, guid: 5b2e4a3d690cdb14e83511355f7c69f2, type: 3}
+    movementSpeed: 5
+    aimingSpeed: 5
+  - name: TankE
+    linkedLevelId: 3
+    mesh: {fileID: 4053798237156460050, guid: a8d097fbde4ebf1439701bc453958d3c, type: 3}
+    material: {fileID: 2100000, guid: b0545452af212b14fbceb71da3ea701f, type: 2}
+    tankPrefab: {fileID: 1285462446013427860, guid: 90caf330d8fb38d4db37f3826b91dd21, type: 3}
+    movementSpeed: 5
+    aimingSpeed: 5
+  - name: TankF
+    linkedLevelId: 3
+    mesh: {fileID: 5332675101941565344, guid: 02573edf3a8b1d2479293b75b56d6dfc, type: 3}
+    material: {fileID: 2100000, guid: d44d99dec69f45f4793151330f007e79, type: 2}
+    tankPrefab: {fileID: 2643669038880904403, guid: cbdfca192c94dad41bb635e45665ab70, type: 3}
+    movementSpeed: 5
+    aimingSpeed: 5
+  - name: TankH
+    linkedLevelId: 3
+    mesh: {fileID: -3604184220270488983, guid: 1af280b0dd7ea65419a7b2d2231f6c2d, type: 3}
+    material: {fileID: 2100000, guid: 57238d38627b58347b5593ef0278fced, type: 2}
+    tankPrefab: {fileID: 4095644070914598009, guid: 7797dda047f75704597d3b217cf02f3c, type: 3}
+    movementSpeed: 5
+    aimingSpeed: 5
+  - name: TankI
+    linkedLevelId: 3
+    mesh: {fileID: 3830023589441514993, guid: c98367cb8b2b8ab42b6d99fdb16f314c, type: 3}
+    material: {fileID: 2100000, guid: 8904c657d175a474f99a70419ac27409, type: 2}
+    tankPrefab: {fileID: 5502505003214281063, guid: a017b33257138e845bd795ccd83e713c, type: 3}
+    movementSpeed: 5
+    aimingSpeed: 5
+  - name: TankJ
+    linkedLevelId: 3
+    mesh: {fileID: 5848618066513661724, guid: ac6426fa73d5bda449d35c60773fc70e, type: 3}
+    material: {fileID: 2100000, guid: 653841e123668784383c14e34bed1941, type: 2}
+    tankPrefab: {fileID: 6685838766871037661, guid: afa4fe41855a07e44861afe3fdbfdbf0, type: 3}
+    movementSpeed: 5
+    aimingSpeed: 5
+  - name: TankK
+    linkedLevelId: 3
+    mesh: {fileID: 2692081428094656989, guid: 2408516ebb743bf49a61a3147209870d, type: 3}
+    material: {fileID: 2100000, guid: 2393c0e72934ab0438d192b59a9be8d7, type: 2}
+    tankPrefab: {fileID: 8481887012383294585, guid: 65a3b9f25ed9dcc48ba8e2e469643ffd, type: 3}
+    movementSpeed: 5
+    aimingSpeed: 5
