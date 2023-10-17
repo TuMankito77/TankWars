@@ -12,7 +12,8 @@ namespace TankWars.Runtime.Core.UI.Buttons
         private EventTrigger eventTrigger = null;
 
         public ButtonId ButtonId => buttonId;
-        public float sliderValue => sliderComponent.value; 
+        public float sliderValue => sliderComponent.value;
+        public override bool IsInteractable => sliderComponent.interactable;
 
         #region Unity Methods
 
@@ -40,7 +41,17 @@ namespace TankWars.Runtime.Core.UI.Buttons
         {
             sliderComponent.value = Mathf.Clamp(value, sliderComponent.minValue, sliderComponent.maxValue); 
         }
-        
+
+        public override void SetButtonInteractable(bool isInteractable)
+        {
+            sliderComponent.interactable = isInteractable; 
+        }
+
+        public override void SetButtonAsSelected()
+        {
+            sliderComponent.Select(); 
+        }
+
         private void OnSliderValueChange(BaseEventData baseEventData)
         {
             EventManager.Instance.Dispatch(buttonId, this); 

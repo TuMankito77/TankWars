@@ -12,7 +12,9 @@ namespace TankWars.Runtime.Core.UI.Buttons
         [SerializeField]
         protected ButtonId buttonId = ButtonId.NONE;
 
-        private Button buttonComponent = null; 
+        private Button buttonComponent = null;
+
+        public virtual bool IsInteractable => buttonComponent.interactable; 
 
         #region Unity Methods
 
@@ -34,9 +36,14 @@ namespace TankWars.Runtime.Core.UI.Buttons
             onButtonPressed?.Invoke(); 
         }
 
-        public void SetButtonInteractable(bool isInteractable)
+        public virtual void SetButtonInteractable(bool isInteractable)
         {
             buttonComponent.interactable = isInteractable; 
+        }
+
+        public virtual void SetButtonAsSelected()
+        {
+            buttonComponent.Select(); 
         }
     }
 }

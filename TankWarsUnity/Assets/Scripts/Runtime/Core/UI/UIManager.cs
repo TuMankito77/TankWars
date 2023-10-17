@@ -55,7 +55,8 @@ namespace TankWars.Runtime.Core.UI
 
             if(Application.isPlaying)
             {
-                currentMenuOpen.InitializeMenu(); 
+                currentMenuOpen.InitializeMenu();
+                currentMenuOpen.SetFirstMenuButtonSelected(); 
             }
         }
 
@@ -108,6 +109,7 @@ namespace TankWars.Runtime.Core.UI
                         currentMenuOpen = showMenuButton.Menu;
                         currentMenuOpen.InitializeMenu(); 
                         currentMenuOpen.TransitionIn();
+                        currentMenuOpen.SetFirstMenuButtonSelected(); 
                         break;
                     }
 
@@ -130,6 +132,7 @@ namespace TankWars.Runtime.Core.UI
                         currentMenuOpen = showCollectibleButton.CollectibleView;
                         currentMenuOpen.InitializeMenu(); 
                         currentMenuOpen.TransitionIn();
+                        currentMenuOpen.SetFirstMenuButtonSelected(); 
                         break; 
                     }
 
@@ -159,6 +162,7 @@ namespace TankWars.Runtime.Core.UI
                         currentMenuOpen = loadingMenu;
                         currentMenuOpen.InitializeMenu(); 
                         currentMenuOpen.TransitionIn();
+                        currentMenuOpen.SetFirstMenuButtonSelected(); 
 
                         AsyncOperationsHandler loadingLevelAsyncOperation = data as AsyncOperationsHandler; 
                         StartCoroutine(loadingMenu.StartLoadingBar(loadingLevelAsyncOperation));
@@ -174,7 +178,8 @@ namespace TankWars.Runtime.Core.UI
                         //Here, eventhough both classes inherit from BaseMenu, the compiler asks for the same type and does not accect polymorphism as an option. 
                         currentMenuOpen = currentLevel != LevelId.NONE ? (BaseMenu)GetMenu<HeadsUpDisplay>() : (BaseMenu)GetMenu<MainMenu>();
                         currentMenuOpen.InitializeMenu(); 
-                        currentMenuOpen.TransitionIn(); 
+                        currentMenuOpen.TransitionIn();
+                        currentMenuOpen.SetFirstMenuButtonSelected(); 
                         break; 
                     }
             }

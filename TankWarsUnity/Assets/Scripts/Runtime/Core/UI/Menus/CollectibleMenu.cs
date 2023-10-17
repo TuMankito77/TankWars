@@ -2,6 +2,7 @@ namespace TankWars.Runtime.Core.UI.Menus
 {
     using TankWars.Runtime.Core.Databases;
     using TankWars.Runtime.Core.ManagerSystem;
+    using TankWars.Runtime.Core.UI.Buttons;
     using TankWars.Runtime.Gameplay.Unlockables;
     using UnityEngine;
 
@@ -15,6 +16,9 @@ namespace TankWars.Runtime.Core.UI.Menus
 
         [SerializeField]
         private CollectibleView collectibleView = null;
+
+        [SerializeField]
+        private CustomButton backButton = null; 
 
         private ShowCollectibleButton[] showCollectibleButtons = null;
 
@@ -33,7 +37,7 @@ namespace TankWars.Runtime.Core.UI.Menus
         public override void InitializeMenu()
         {
             base.InitializeMenu();
-            CreateCollectibleButtons(); 
+            CreateCollectibleButtons();
         }
 
         public override void TerminateMenu()
