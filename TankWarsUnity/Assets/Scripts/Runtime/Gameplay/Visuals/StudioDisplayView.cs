@@ -8,33 +8,40 @@ namespace TankWars.Runtime.Gameplay.Visuals
         private MeshFilter placeHolderMeshFilter = null;
 
         [SerializeField]
-        private MeshRenderer placeHolderMeshRenderer = null;
+        protected MeshRenderer placeHolderMeshRenderer = null;
 
         [SerializeField]
-        private Transform studioCenterPoint = null; 
+        private Transform studioCenterPoint = null;
 
-        protected virtual void UpdatePlaceHolderAppearance(Mesh mesh, Material material)
+        public virtual string PlaceHolderColorPropertyName => "MainColor"; 
+        
+        public virtual void UpdatePlaceHolderAppearance(Mesh mesh, Material material)
         {
             placeHolderMeshFilter.mesh = mesh;
             placeHolderMeshRenderer.material = material;
         }
 
-        protected virtual void UpdatePlaceHolderMesh(Mesh mesh)
+        public virtual void UpdatePlaceHolderMesh(Mesh mesh)
         {
             placeHolderMeshFilter.mesh = mesh; 
         }
 
-        protected virtual void UpdatePlaceHolderMaterial(Material material)
+        public virtual void UpdatePlaceHolderMaterial(Material material)
         {
             placeHolderMeshRenderer.material = material; 
         }
 
-        protected virtual void Show()
+        public virtual void UpdatePlaceHolderMaterialColor(Color color)
+        {
+            placeHolderMeshRenderer.material.SetColor(PlaceHolderColorPropertyName, color); 
+        }
+
+        public virtual void Show()
         {
             gameObject.SetActive(true); 
         }
 
-        protected virtual void Hide()
+        public virtual void Hide()
         {
             gameObject.SetActive(false);
         }

@@ -3,7 +3,8 @@ namespace TankWars.Runtime.Core.UI.Menus
     using TankWars.Runtime.Core.Events;
     using System;
     using UnityEngine;
-    using UnityEngine.UI; 
+    using UnityEngine.UI;
+    using TankWars.Runtime.Gameplay.Visuals;
 
     public class CollectibleView : BaseMenu, IEventListener
     {
@@ -12,6 +13,9 @@ namespace TankWars.Runtime.Core.UI.Menus
 
         [SerializeField]
         private MeshFilter meshFilterPlaceholder = null;
+
+        [SerializeField]
+        private CollectibleStudioView collectibleStudioView = null; 
 
         #region Unity Methods
 
@@ -26,6 +30,18 @@ namespace TankWars.Runtime.Core.UI.Menus
         }
 
         #endregion
+
+        public override void TransitionIn()
+        {
+            base.TransitionIn();
+            collectibleStudioView.Show();
+        }
+
+        public override void TransitionOut()
+        {
+            base.TransitionOut();
+            collectibleStudioView.Hide();
+        }
 
         public void OnEventReceived(IComparable eventType, object data)
         {
@@ -53,7 +69,8 @@ namespace TankWars.Runtime.Core.UI.Menus
                     {
                         ShowCollectibleButton showCollectibleButton = data as ShowCollectibleButton;
                         collectibleNameTitle.text = showCollectibleButton.KeyChainCollectibleLinked.Name; 
-                        meshFilterPlaceholder.mesh = showCollectibleButton.KeyChainCollectibleLinked.Mesh; 
+                        meshFilterPlaceholder.mesh = showCollectibleButton.KeyChainCollectibleLinked.Mesh;
+                        collectibleStudioView.UpdateCollectiblePlaceHolder(showCollectibleButton.KeyChainCollectibleLinked);
                         break;
                     }
             }

@@ -1,54 +1,41 @@
 namespace TankWars.Runtime.Gameplay.Visuals
 {
-    using TankWars.Runtime.Gameplay.Unlockables;
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class CustomizeTankView : MonoBehaviour
+    public class CustomizeTankView : StudioDisplayView
     {
-        public const string TANK_SHADER_COLOR_PROPERTY_NAME = "_Main_Color"; 
-
-        [SerializeField]
-        private MeshFilter tankPlaceholderMeshFilter = null;
-
-        [SerializeField]
-        private MeshRenderer tankPlaceholderMeshRenderer = null;
-
         [SerializeField]
         private Image tankLockedImage = null; 
 
         [SerializeField]
         private Transform cameraRotaionParent = null;
 
+        public override string PlaceHolderColorPropertyName => "_Main_Color";
+
         public Color TankColor { get; private set; } = Color.white;
 
         private readonly Color nonTransparentColor = new Color(255, 255, 255, 1);
         private readonly Color transparentColor = new Color(255, 255, 255, 0);
 
-        public void UpdateTankPlaceHolder(TankInfoContainer tankInfoContainer)
+        public override void UpdatePlaceHolderAppearance(Mesh mesh, Material material)
         {
-            tankPlaceholderMeshFilter.mesh = tankInfoContainer.Mesh;
-            tankPlaceholderMeshRenderer.material = tankInfoContainer.Material;
-            tankPlaceholderMeshRenderer.material.SetColor(TANK_SHADER_COLOR_PROPERTY_NAME, TankColor); 
-            tankLockedImage.color = tankInfoContainer.IsObjectUnlocked ? transparentColor : nonTransparentColor; 
+            base.UpdatePlaceHolderAppearance(mesh, material);
+            placeHolderMeshRenderer.material.SetColor(PlaceHolderColorPropertyName, TankColor);
         }
 
-        public void UpdateTankPlaceHolderColor(Color color)
+        public override void UpdatePlaceHolderMaterialColor(Color color)
         {
+            base.UpdatePlaceHolderMaterialColor(color);
             TankColor = color;
-            tankPlaceholderMeshRenderer.material.SetColor(TANK_SHADER_COLOR_PROPERTY_NAME, TankColor); 
         }
 
-        public void Show()
+        public void UpdateTankLockedIcon(bool isTankUnlocked)
         {
-            gameObject.SetActive(true); 
-        }
-
-        public void Hide()
-        {
-            gameObject.SetActive(false);
+            tankLockedImage.color = isTankUnlocked ? transparentColor : nonTransparentColor;
         }
 
         //TODO: Create the controls for rotating the camera around
+        //TODO: Move the functionality for rotating the camera around to the parent class
     }
 }

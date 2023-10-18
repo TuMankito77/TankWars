@@ -63,8 +63,9 @@ namespace TankWars.Runtime.Core.UI.Menus
             tankInfoContainerSelectedIndex = playerInformation.TankInfoContaierIndex;
             tankInfoContainerSelected = tankInfoContainers[tankInfoContainerSelectedIndex];
             tankNameText.text = tankInfoContainerSelected.Name;
-            customizeTankView.UpdateTankPlaceHolder(tankInfoContainerSelected);
-            customizeTankView.UpdateTankPlaceHolderColor(playerInformation.TankColor); 
+            customizeTankView.UpdatePlaceHolderAppearance(tankInfoContainerSelected.Mesh, tankInfoContainerSelected.Material);
+            customizeTankView.UpdateTankLockedIcon(tankInfoContainerSelected.IsObjectUnlocked); 
+            customizeTankView.UpdatePlaceHolderMaterialColor(playerInformation.TankColor); 
         }
 
         public override void TransitionIn()
@@ -97,14 +98,15 @@ namespace TankWars.Runtime.Core.UI.Menus
             //We use Mathf.Abs since the MOD operator returns a negative number if one of the variables being processed is negative.
             tankInfoContainerSelected = tankInfoContainers[Mathf.Abs(newIndex)];
             tankNameText.text = tankInfoContainerSelected.Name;
-            customizeTankView.UpdateTankPlaceHolder(tankInfoContainerSelected);
+            customizeTankView.UpdatePlaceHolderAppearance(tankInfoContainerSelected.Mesh, tankInfoContainerSelected.Material);
+            customizeTankView.UpdateTankLockedIcon(tankInfoContainerSelected.IsObjectUnlocked);
             selectTankButton.interactable = tankInfoContainerSelected.IsObjectUnlocked; 
         }
 
         private void OnSelectTankButtonPressed()
         {
             TankInfoContainer tankInfoContainerSelected = tankInfoContainers[tankInfoContainerSelectedIndex];
-            tankInfoContainerSelected.Material.SetColor(CustomizeTankView.TANK_SHADER_COLOR_PROPERTY_NAME, customizeTankView.TankColor); 
+            tankInfoContainerSelected.Material.SetColor(customizeTankView.PlaceHolderColorPropertyName, customizeTankView.TankColor); 
 
             PlayerInformationParameters playerInformationParameters = new PlayerInformationParameters()
             {
@@ -141,7 +143,7 @@ namespace TankWars.Runtime.Core.UI.Menus
                 case ButtonId.TANK_COLOR:
                     {
                         Color color = (Color)data;
-                        customizeTankView.UpdateTankPlaceHolderColor(color);
+                        customizeTankView.UpdatePlaceHolderMaterialColor(color);
                         break;
                     }
 
