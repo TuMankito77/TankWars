@@ -6,34 +6,60 @@ namespace TankWars.Runtime.Core.UI.Helpers
 
     public class EventTriggerController
     {
+        private struct EntryListenersCounter
+        {
+            public EventTrigger.Entry entry;
+            public int numberOfCallbacks;
+            
+            public EntryListenersCounter(EventTrigger.Entry entry, EventTriggerType eventTriggerType, int numberOfCallbacks)
+            {
+                this.entry = entry;
+                this.entry.eventID = eventTriggerType;
+                this.numberOfCallbacks = numberOfCallbacks;
+            }
+        }
+
         private EventTrigger eventTrigger = null;
-        private Dictionary<EventTriggerType, EventTrigger.Entry> triggerEntries = null;
+        private Dictionary<EventTriggerType, EntryListenersCounter> entryListernersCounterByType = null;
 
         public EventTriggerController(EventTrigger eventTrigger)
         {
             this.eventTrigger = eventTrigger;
-            triggerEntries = new Dictionary<EventTriggerType, EventTrigger.Entry>();
+            entryListernersCounterByType = new Dictionary<EventTriggerType, EntryListenersCounter>();
         }
 
         public void SubscribeToTiggerEvent(EventTriggerType eventTriggerType, UnityAction<BaseEventData> onEventTriggered)
         {
-            if(triggerEntries.TryGetValue(eventTriggerType, out EventTrigger.Entry entry))
+            if(entryListernersCounterByType.TryGetValue(eventTriggerType, out EntryListenersCounter entryListenersCounter))
             {
-                entry.callback.AddListener(onEventTriggered);
+                entryListenersCounter.entry.callback.AddListener(onEventTriggered);
+                entryListenersCounter.numberOfCallbacks++;
                 return;
             }
 
-            triggerEntries.Add(eventTriggerType, new EventTrigger.Entry());
-            triggerEntries[eventTriggerType].eventID = eventTriggerType;
-            triggerEntries[eventTriggerType].callback.AddListener(onEventTriggered);
+            EntryListenersCounter newEntryListenersCounter = new EntryListenersCounter(new EventTrigger.Entry(), eventTriggerType, 0);
+            newEntryListenersCounter.entry.callback.AddListener(onEventTriggered);
+            eventTrigger.triggers.Add(newEntryListenersCounter.entry);
+            entryListernersCounterByType.Add(eventTriggerType, newEntryListenersCounter);
         }
 
         public void UnsubscribeToTriggerEvent(EventTriggerType eventTriggerType, UnityAction<BaseEventData> onEventTriggered)
         {
-            if (triggerEntries.TryGetValue(eventTriggerType, out EventTrigger.Entry entry))
+            if (!entryListernersCounterByType.TryGetValue(eventTriggerType, out EntryListenersCounter entryListenersCounter))
             {
-                entry.callback.RemoveListener(onEventTriggered);
+                return;
             }
+
+            entryListenersCounter.entry.callback.RemoveListener(onEventTriggered);
+            entryListenersCounter.numberOfCallbacks--;
+
+            if (!(entryListenersCounter.numberOfCallbacks == 0))
+            {
+                return;
+            }
+
+            eventTrigger.triggers.Remove(entryListenersCounter.entry);
+            entryListernersCounterByType.Remove(eventTriggerType);
         }
     }
 }
