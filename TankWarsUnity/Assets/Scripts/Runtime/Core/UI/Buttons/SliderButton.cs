@@ -1,6 +1,6 @@
 namespace TankWars.Runtime.Core.UI.Buttons
 {
-    using TankWars.Runtime.Core.Databases;
+    using TankWars.Runtime.Core.UI.Helpers;
     using TankWars.Runtime.Core.Events;
     using UnityEngine;
     using UnityEngine.EventSystems;
@@ -9,7 +9,6 @@ namespace TankWars.Runtime.Core.UI.Buttons
     public class SliderButton : CustomButton
     {
         private Slider sliderComponent = null;
-        private EventTrigger eventTrigger = null;
 
         public ButtonId ButtonId => buttonId;
         public float sliderValue => sliderComponent.value;
@@ -19,12 +18,10 @@ namespace TankWars.Runtime.Core.UI.Buttons
 
         protected override void Awake()
         {
+            GetEventTriggerComponent();
+            eventTriggerController = new EventTriggerController(eventTrigger);
+            eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.EndDrag, OnSliderValueChange);
             sliderComponent = GetComponent<Slider>();
-            eventTrigger = GetComponent<EventTrigger>();
-            EventTrigger.Entry entry = new EventTrigger.Entry();
-            entry.eventID = EventTriggerType.EndDrag;
-            entry.callback.AddListener(OnSliderValueChange);
-            eventTrigger.triggers.Add(entry); 
         }
 
         //We are overriding the OnDestroy method as the one that the CustomButton class has tries to 
@@ -32,7 +29,7 @@ namespace TankWars.Runtime.Core.UI.Buttons
         //null reference exeption. 
         protected override void OnDestroy()
         {
-            
+            eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.EndDrag, OnSliderValueChange);
         }
 
         #endregion
