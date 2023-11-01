@@ -18,17 +18,14 @@ namespace TankWars.Runtime.Core.UI.Buttons
 
         protected override void Awake()
         {
-            GetEventTriggerComponent();
-            eventTriggerController = new EventTriggerController(eventTrigger);
+            base.Awake();
             eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.EndDrag, OnSliderValueChange);
             sliderComponent = GetComponent<Slider>();
         }
-
-        //We are overriding the OnDestroy method as the one that the CustomButton class has tries to 
-        //unsubscribe from the button component which is never assigned a hense throughs a 
-        //null reference exeption. 
+ 
         protected override void OnDestroy()
         {
+            base.Awake();
             eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.EndDrag, OnSliderValueChange);
         }
 
@@ -47,6 +44,14 @@ namespace TankWars.Runtime.Core.UI.Buttons
         public override void SetButtonAsSelected()
         {
             sliderComponent.Select(); 
+        }
+
+        //We are overriding the GetButtonComponent method as the one that the CustomButton class has tries to 
+        //unsubscribe from the button component which is never assigned and ,hense ,throughs a 
+        //null reference exeption.
+        protected override void GetButtonComponent()
+        {
+
         }
 
         private void OnSliderValueChange(BaseEventData baseEventData)

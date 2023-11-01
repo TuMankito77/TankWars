@@ -1,7 +1,6 @@
 namespace TankWars.Runtime.Core.UI.Buttons
 {
     using System;
-    using System.Collections.Generic;
     using TankWars.Runtime.Core.UI.Helpers;
     using UnityEngine;
     using UnityEngine.EventSystems;
@@ -29,18 +28,20 @@ namespace TankWars.Runtime.Core.UI.Buttons
         protected virtual void Awake()
         {
             GetButtonComponent();
-            buttonComponent.onClick.AddListener(OnButtonClicked);
             GetEventTriggerComponent();
             eventTriggerController = new EventTriggerController(eventTrigger);
             eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.PointerEnter, OnPointerEnter);
             eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.PointerExit, OnPointerExit);
+            eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.PointerClick, OnPointerClick);
+            eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.Submit, OnPointerClick);
         }
 
         protected virtual void OnDestroy()
         {
-            buttonComponent.onClick.RemoveListener(OnButtonClicked);
             eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.PointerEnter, OnPointerEnter);
             eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.PointerExit, OnPointerExit);
+            eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.PointerClick, OnPointerClick);
+            eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.Submit, OnPointerClick);
         }
 
         #endregion
@@ -84,6 +85,11 @@ namespace TankWars.Runtime.Core.UI.Buttons
         private void OnPointerExit(BaseEventData baseEventData)
         {
 
+        }
+
+        private void OnPointerClick(BaseEventData baseEventData)
+        {
+            OnButtonClicked();
         }
     }
 }
