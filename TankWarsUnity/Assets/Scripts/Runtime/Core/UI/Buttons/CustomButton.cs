@@ -5,6 +5,7 @@ namespace TankWars.Runtime.Core.UI.Buttons
     using UnityEngine;
     using UnityEngine.EventSystems;
     using UnityEngine.UI;
+    using DG.Tweening;
 
     public class CustomButton : MonoBehaviour
     {
@@ -19,6 +20,18 @@ namespace TankWars.Runtime.Core.UI.Buttons
         [SerializeField]
         protected EventTrigger eventTrigger = null;
 
+        [Header("Button Effects Settings")]
+
+        [SerializeField]
+        private float scaleIncrease = 0.2f;
+
+        [SerializeField]
+        private float scaleIncreaseDuration = 0.1f;
+
+        [SerializeField]
+        private Ease scaleEase = Ease.InOutSine;
+
+        private Vector3 defaultScale = default(Vector3);
         protected EventTriggerController eventTriggerController = null;
 
         public virtual bool IsInteractable => buttonComponent.interactable;
@@ -34,6 +47,7 @@ namespace TankWars.Runtime.Core.UI.Buttons
             eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.PointerExit, OnPointerExit);
             eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.PointerClick, OnPointerClick);
             eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.Submit, OnPointerClick);
+            defaultScale = transform.localScale;
         }
 
         protected virtual void OnDestroy()
@@ -80,11 +94,13 @@ namespace TankWars.Runtime.Core.UI.Buttons
         private void OnPointerEnter(BaseEventData baseEventData)
         {
             SetButtonAsSelected();
+            Vector3 increaseScale = new Vector3(defaultScale.x + scaleIncrease, defaultScale.y + scaleIncrease, defaultScale.z + scaleIncrease);
+            transform.DOScale(increaseScale, scaleIncreaseDuration).SetEase(scaleEase); 
         }
 
         private void OnPointerExit(BaseEventData baseEventData)
         {
-
+            transform.DOScale(defaultScale, scaleIncreaseDuration).SetEase(scaleEase);
         }
 
         private void OnPointerClick(BaseEventData baseEventData)
