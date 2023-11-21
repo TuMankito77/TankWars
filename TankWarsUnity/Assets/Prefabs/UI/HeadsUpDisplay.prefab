@@ -218,6 +218,9 @@ MonoBehaviour:
   buttonId: 2
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0
+  scaleEase: 4
   menu: {fileID: 0}
 --- !u!1 &2281164630677280212
 GameObject:
