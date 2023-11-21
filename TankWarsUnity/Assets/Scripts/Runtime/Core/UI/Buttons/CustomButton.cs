@@ -25,7 +25,7 @@ namespace TankWars.Runtime.Core.UI.Buttons
         [SerializeField]
         private float scaleIncrease = 0.2f;
 
-        [SerializeField]
+        [SerializeField, Min(0)]
         private float scaleIncreaseDuration = 0.1f;
 
         [SerializeField]
@@ -47,6 +47,8 @@ namespace TankWars.Runtime.Core.UI.Buttons
             eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.PointerExit, OnPointerExit);
             eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.PointerClick, OnPointerClick);
             eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.Submit, OnPointerClick);
+            eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.Select, OnSelected);
+            eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.Deselect, OnDeselect);
             defaultScale = transform.localScale;
         }
 
@@ -55,7 +57,9 @@ namespace TankWars.Runtime.Core.UI.Buttons
             eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.PointerEnter, OnPointerEnter);
             eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.PointerExit, OnPointerExit);
             eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.PointerClick, OnPointerClick);
-            eventTriggerController.SubscribeToTiggerEvent(EventTriggerType.Submit, OnPointerClick);
+            eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.Submit, OnPointerClick);
+            eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.Select, OnSelected);
+            eventTriggerController.UnsubscribeToTriggerEvent(EventTriggerType.Deselect, OnDeselect);
         }
 
         #endregion
@@ -83,7 +87,7 @@ namespace TankWars.Runtime.Core.UI.Buttons
             buttonComponent = gameObject.AddComponent<Button>();
         }
 
-        protected void GetEventTriggerComponent()
+        protected virtual void GetEventTriggerComponent()
         {
             if (eventTrigger != null) return;
             eventTrigger = GetComponent<EventTrigger>();
@@ -91,14 +95,23 @@ namespace TankWars.Runtime.Core.UI.Buttons
             eventTrigger = gameObject.AddComponent<EventTrigger>();
         }
 
-        private void OnPointerEnter(BaseEventData baseEventData)
+        protected virtual void OnPointerEnter(BaseEventData baseEventData)
         {
-            SetButtonAsSelected();
-            Vector3 increaseScale = new Vector3(defaultScale.x + scaleIncrease, defaultScale.y + scaleIncrease, defaultScale.z + scaleIncrease);
-            transform.DOScale(increaseScale, scaleIncreaseDuration).SetEase(scaleEase); 
+            SetButtonAsSelected(); 
         }
 
-        private void OnPointerExit(BaseEventData baseEventData)
+        protected virtual void OnPointerExit(BaseEventData baseEventData)
+        {
+            
+        }
+
+        protected virtual void OnSelected(BaseEventData baseEventData)
+        {
+            Vector3 increaseScale = new Vector3(defaultScale.x + scaleIncrease, defaultScale.y + scaleIncrease, defaultScale.z + scaleIncrease);
+            transform.DOScale(increaseScale, scaleIncreaseDuration).SetEase(scaleEase);
+        }
+
+        protected virtual void OnDeselect(BaseEventData baseEventData)
         {
             transform.DOScale(defaultScale, scaleIncreaseDuration).SetEase(scaleEase);
         }
