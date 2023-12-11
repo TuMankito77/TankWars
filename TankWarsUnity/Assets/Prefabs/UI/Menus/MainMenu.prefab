@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 152213254}
   - component: {fileID: 152213253}
   - component: {fileID: 152213252}
+  - component: {fileID: 2500327164483438696}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -122,6 +123,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2500327164483438696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152213250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b803b4465ecd784987cca95fa37f168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: 2
+  buttonComponent: {fileID: 0}
+  eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
+  menu: {fileID: 0}
 --- !u!1 &292842510
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +490,7 @@ GameObject:
   - component: {fileID: 1028668638}
   - component: {fileID: 1028668637}
   - component: {fileID: 1028668636}
+  - component: {fileID: 7814402237275332825}
   m_Layer: 5
   m_Name: 'CollectiblesButton '
   m_TagString: Untagged
@@ -580,6 +601,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7814402237275332825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028668634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b803b4465ecd784987cca95fa37f168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: 2
+  buttonComponent: {fileID: 0}
+  eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
+  menu: {fileID: 0}
 --- !u!1 &1059032492
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b803b4465ecd784987cca95fa37f168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonId: 0
+  buttonId: 2
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
   scaleIncrease: 0.2
@@ -1099,6 +1139,7 @@ GameObject:
   - component: {fileID: 1756173832}
   - component: {fileID: 1756173831}
   - component: {fileID: 1756173830}
+  - component: {fileID: 2891808383954126214}
   m_Layer: 5
   m_Name: CustmizeTankButton
   m_TagString: Untagged
@@ -1209,6 +1250,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2891808383954126214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756173828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b803b4465ecd784987cca95fa37f168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: 2
+  buttonComponent: {fileID: 0}
+  eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
+  menu: {fileID: 0}
 --- !u!1 &2064125904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_AnchorMax.x

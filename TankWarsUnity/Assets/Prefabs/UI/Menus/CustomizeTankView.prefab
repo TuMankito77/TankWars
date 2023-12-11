@@ -137,6 +137,9 @@ MonoBehaviour:
   buttonId: 3
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   colorImage: {fileID: 24899270}
 --- !u!1 &39851427
 GameObject:
@@ -275,6 +278,9 @@ MonoBehaviour:
   buttonId: 3
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   colorImage: {fileID: 39851429}
 --- !u!1 &66002278
 GameObject:
@@ -372,6 +378,7 @@ GameObject:
   - component: {fileID: 778567731}
   - component: {fileID: 778567730}
   - component: {fileID: 778567729}
+  - component: {fileID: 5099639840127691877}
   m_Layer: 5
   m_Name: PreviousButton
   m_TagString: Untagged
@@ -482,6 +489,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5099639840127691877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778567727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0afc8597e2ced2f44aa06ecf4a41ee26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: 0
+  buttonComponent: {fileID: 0}
+  eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
 --- !u!1 &841640530
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +833,9 @@ MonoBehaviour:
   buttonId: 3
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   colorImage: {fileID: 1127791235}
 --- !u!1 &1142429870
 GameObject:
@@ -821,6 +849,7 @@ GameObject:
   - component: {fileID: 1142429874}
   - component: {fileID: 1142429873}
   - component: {fileID: 1142429872}
+  - component: {fileID: 4870523562059435056}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -931,6 +960,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4870523562059435056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142429870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0afc8597e2ced2f44aa06ecf4a41ee26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: 0
+  buttonComponent: {fileID: 0}
+  eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
 --- !u!1 &1176119662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,6 +1272,9 @@ MonoBehaviour:
   buttonId: 3
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   colorImage: {fileID: 1540752665}
 --- !u!1 &1669576020
 GameObject:
@@ -1587,6 +1637,9 @@ MonoBehaviour:
   buttonId: 3
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   colorImage: {fileID: 2057338797}
 --- !u!1 &4205237472249304154
 GameObject:
@@ -1935,6 +1988,9 @@ MonoBehaviour:
   buttonId: 0
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   menu: {fileID: 0}
 --- !u!1001 &1565086781412698148
 PrefabInstance:

@@ -138,6 +138,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 2
 --- !u!1 &172821799
 GameObject:
@@ -389,6 +392,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 2
 --- !u!1 &258294813
 GameObject:
@@ -752,6 +758,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 2
 --- !u!1 &458767055
 GameObject:
@@ -891,6 +900,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 5
 --- !u!1 &669028651
 GameObject:
@@ -1254,6 +1266,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 2
 --- !u!1 &961934439
 GameObject:
@@ -1465,6 +1480,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 2
 --- !u!1 &1362159275
 GameObject:
@@ -1604,6 +1622,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 2
 --- !u!1 &1383370914
 GameObject:
@@ -1855,6 +1876,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 2
 --- !u!1 &1555960492
 GameObject:
@@ -1994,6 +2018,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 2
 --- !u!1 &1604048580
 GameObject:
@@ -2693,6 +2720,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 2
 --- !u!1 &2028758123
 GameObject:
@@ -2832,6 +2862,9 @@ MonoBehaviour:
   buttonId: 1
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   levelId: 2
 --- !u!1001 &3676018843966515976
 PrefabInstance:
@@ -2841,6 +2874,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 288645644141878774, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: buttonId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2851,7 +2888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2937,6 +2974,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8072573330642673089, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8072573330642673089, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8072573330642673089, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2951,6 +3000,11 @@ PrefabInstance:
 --- !u!224 &2519602330522166802 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+  m_PrefabInstance: {fileID: 3676018843966515976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &4829086976545896137 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 8072573330642673089, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
   m_PrefabInstance: {fileID: 3676018843966515976}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6965763800473924319 stripped
@@ -2970,4 +3024,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1abce6c7335fee64285b3f8fd6d81aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCanvasGroup: {fileID: 0}
+  menuCanvasGroup: {fileID: 4829086976545896137}

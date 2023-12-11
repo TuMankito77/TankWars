@@ -697,4 +697,7 @@ MonoBehaviour:
   buttonId: 0
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   menu: {fileID: 0}
