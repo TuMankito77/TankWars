@@ -290,7 +290,7 @@ RectTransform:
   m_GameObject: {fileID: 617256785127925929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99997205, y: 0.99997205, z: 0.99997205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 617256784936479268}
@@ -399,6 +399,9 @@ MonoBehaviour:
   buttonId: 2
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   menu: {fileID: 0}
 --- !u!1 &617256785395803261
 GameObject:
@@ -533,7 +536,7 @@ RectTransform:
   m_GameObject: {fileID: 617256785676817797}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99997216, y: 0.99997216, z: 0.99997216}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 617256785058310459}
@@ -1159,6 +1162,9 @@ MonoBehaviour:
   buttonId: 5
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
 --- !u!1 &617256785919613298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,6 +1543,9 @@ MonoBehaviour:
   buttonId: 6
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
 --- !u!1 &617256786272520453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,7 +1571,7 @@ RectTransform:
   m_GameObject: {fileID: 617256786272520453}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99997216, y: 0.99997216, z: 0.99997216}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 617256785966724277}
@@ -1585,6 +1594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 617256786530605256}
   - component: {fileID: 617256786530605257}
+  - component: {fileID: 8337840559191618045}
   m_Layer: 5
   m_Name: OptionsGroup
   m_TagString: Untagged
@@ -1632,10 +1642,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 100
-    m_Bottom: 100
+    m_Top: 0
+    m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 50
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -1643,6 +1653,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &8337840559191618045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617256786530605239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1 &617256786540030504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1733,7 @@ RectTransform:
   m_GameObject: {fileID: 617256786584042416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99997205, y: 0.99997205, z: 0.99997205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 617256786745829283}
@@ -1818,6 +1842,9 @@ MonoBehaviour:
   buttonId: 2
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   menu: {fileID: 0}
 --- !u!1 &617256786705851725
 GameObject:
@@ -2109,7 +2136,7 @@ RectTransform:
   m_GameObject: {fileID: 8527336244715089580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99997205, y: 0.99997205, z: 0.99997205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4400223197396667084}
@@ -2218,6 +2245,9 @@ MonoBehaviour:
   buttonId: 2
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   menu: {fileID: 0}
 --- !u!1 &8900122495781732058
 GameObject:
