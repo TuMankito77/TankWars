@@ -108,12 +108,12 @@ namespace TankWars.Runtime.Core.UI.Buttons
         protected virtual void OnSelected(BaseEventData baseEventData)
         {
             Vector3 increaseScale = new Vector3(defaultScale.x + scaleIncrease, defaultScale.y + scaleIncrease, defaultScale.z + scaleIncrease);
-            transform.DOScale(increaseScale, scaleIncreaseDuration).SetEase(scaleEase);
+            transform.DOScale(increaseScale, scaleIncreaseDuration).SetEase(scaleEase).SetUpdate(true);
         }
 
         protected virtual void OnDeselect(BaseEventData baseEventData)
         {
-            transform.DOScale(defaultScale, scaleIncreaseDuration).SetEase(scaleEase);
+            transform.DOScale(defaultScale, scaleIncreaseDuration).SetEase(scaleEase).SetUpdate(true);
         }
 
         private void OnPointerClick(BaseEventData baseEventData)
