@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3408331806668164228, guid: 9c75e3ee4b647804581a6fc09935011a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8935027833844414482, guid: 9c75e3ee4b647804581a6fc09935011a, type: 3}
       propertyPath: m_Name
       value: CollectibleLightingStudio Variant
