@@ -71,6 +71,7 @@ namespace TankWars.Runtime.Core.UI.Buttons
 
         public virtual void SetButtonAsSelected()
         {
+            if (!buttonComponent.interactable) return;
             buttonComponent.Select();
         }
 
@@ -118,6 +119,7 @@ namespace TankWars.Runtime.Core.UI.Buttons
 
         private void OnPointerClick(BaseEventData baseEventData)
         {
+            if (!buttonComponent.interactable) return;
             OnButtonClicked();
         }
     }
