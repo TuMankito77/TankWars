@@ -94,10 +94,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1362159277}
+    m_SelectOnDown: {fileID: 1191895952}
+    m_SelectOnLeft: {fileID: 1555960494}
+    m_SelectOnRight: {fileID: 908663809}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -348,9 +348,9 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 2012725223}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 908663809}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -714,9 +714,9 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnUp: {fileID: 908663809}
+    m_SelectOnDown: {fileID: 3595486098024362111}
+    m_SelectOnLeft: {fileID: 1191895952}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -857,9 +857,9 @@ MonoBehaviour:
     m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 1555960494}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 1362159277}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1222,10 +1222,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 2028758125}
+    m_SelectOnDown: {fileID: 396096047}
+    m_SelectOnLeft: {fileID: 87611272}
+    m_SelectOnRight: {fileID: 231511249}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1436,10 +1436,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 87611272}
+    m_SelectOnDown: {fileID: 3595486098024362111}
+    m_SelectOnLeft: {fileID: 1448684828}
+    m_SelectOnRight: {fileID: 396096047}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1579,9 +1579,9 @@ MonoBehaviour:
     m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 87611272}
+    m_SelectOnLeft: {fileID: 458767057}
+    m_SelectOnRight: {fileID: 2028758125}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1832,10 +1832,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 1555960494}
+    m_SelectOnDown: {fileID: 3595486098024362111}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 1191895952}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1974,10 +1974,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 458767057}
+    m_SelectOnDown: {fileID: 1448684828}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 87611272}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2677,8 +2677,8 @@ MonoBehaviour:
     m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnDown: {fileID: 231511249}
+    m_SelectOnLeft: {fileID: 2028758125}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -2819,9 +2819,9 @@ MonoBehaviour:
     m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 908663809}
+    m_SelectOnLeft: {fileID: 1362159277}
+    m_SelectOnRight: {fileID: 2012725223}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2874,6 +2874,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 208973351603723127, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 208973351603723127, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 1448684828}
     - target: {fileID: 288645644141878774, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: buttonId
       value: 2
@@ -2888,7 +2896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2976,15 +2984,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8072573330642673089, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8072573330642673089, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8072573330642673089, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_BlocksRaycasts
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3002,6 +3010,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
   m_PrefabInstance: {fileID: 3676018843966515976}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3595486098024362111 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 208973351603723127, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+  m_PrefabInstance: {fileID: 3676018843966515976}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!225 &4829086976545896137 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8072573330642673089, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}

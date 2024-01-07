@@ -244,6 +244,9 @@ MonoBehaviour:
   buttonId: 5
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
 --- !u!1 &351113740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,9 +1228,9 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 3077867869736377149}
+    m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 189874369}
-    m_SelectOnLeft: {fileID: 1756596911}
+    m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 1791597185}
   m_Transition: 1
   m_Colors:
@@ -1269,6 +1272,9 @@ MonoBehaviour:
   buttonId: 4
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   difficulty: 0
 --- !u!1 &1334972238
 GameObject:
@@ -1890,6 +1896,9 @@ MonoBehaviour:
   buttonId: 6
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
 --- !u!1 &1754489030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,10 +2101,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 3077867869736377149}
+    m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 189874369}
     m_SelectOnLeft: {fileID: 1791597185}
-    m_SelectOnRight: {fileID: 1252244249}
+    m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2136,6 +2145,9 @@ MonoBehaviour:
   buttonId: 4
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   difficulty: 2
 --- !u!1 &1791597183
 GameObject:
@@ -2231,7 +2243,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 3077867869736377149}
+    m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 189874369}
     m_SelectOnLeft: {fileID: 1252244249}
     m_SelectOnRight: {fileID: 1756596911}
@@ -2275,6 +2287,9 @@ MonoBehaviour:
   buttonId: 4
   buttonComponent: {fileID: 0}
   eventTrigger: {fileID: 0}
+  scaleIncrease: 0.2
+  scaleIncreaseDuration: 0.1
+  scaleEase: 4
   difficulty: 1
 --- !u!1 &1802527665
 GameObject:
@@ -2482,7 +2497,7 @@ PrefabInstance:
     - target: {fileID: 208973351603723127, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
-      objectReference: {fileID: 1791597185}
+      objectReference: {fileID: 0}
     - target: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

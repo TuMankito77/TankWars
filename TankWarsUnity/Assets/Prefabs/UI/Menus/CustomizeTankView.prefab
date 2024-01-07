@@ -91,12 +91,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 778567729}
+    m_SelectOnLeft: {fileID: 4060304853648855170}
+    m_SelectOnRight: {fileID: 2530349827017298915}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -232,12 +232,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 778567729}
+    m_SelectOnLeft: {fileID: 2859019927352495743}
+    m_SelectOnRight: {fileID: 4060304853648855170}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -458,12 +458,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 2859019927352495743}
+    m_SelectOnDown: {fileID: 1683820716713030483}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 1142429872}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -787,12 +787,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 778567729}
+    m_SelectOnLeft: {fileID: 2530349827017298915}
+    m_SelectOnRight: {fileID: 8694744324405071510}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -929,11 +929,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnUp: {fileID: 2859019927352495743}
+    m_SelectOnDown: {fileID: 3811641674843645625}
+    m_SelectOnLeft: {fileID: 778567729}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -1226,12 +1226,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 778567729}
+    m_SelectOnLeft: {fileID: 3956924169731055460}
+    m_SelectOnRight: {fileID: 2859019927352495743}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1591,12 +1591,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnDown: {fileID: 778567729}
+    m_SelectOnLeft: {fileID: 8694744324405071510}
+    m_SelectOnRight: {fileID: 3956924169731055460}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1654,7 +1654,7 @@ GameObject:
   - component: {fileID: 7970408225360396598}
   - component: {fileID: 5379685733650441465}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: ColorsBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1942,11 +1942,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 1142429872}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1683820716713030483}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -2000,6 +2000,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 208973351603723127, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 208973351603723127, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 778567729}
+    - target: {fileID: 208973351603723127, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 208973351603723127, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 208973351603723127, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+      propertyPath: m_Navigation.m_SelectOnRight
+      value: 
+      objectReference: {fileID: 3811641674843645625}
     - target: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2127,6 +2147,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1293864953157061914, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
   m_PrefabInstance: {fileID: 1565086781412698148}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1683820716713030483 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 208973351603723127, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
+  m_PrefabInstance: {fileID: 1565086781412698148}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5048751571358364147 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6028220850451372503, guid: b8d7fe9cf0ebe144193c3eb4216d5ced, type: 3}
