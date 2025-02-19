@@ -226,9 +226,9 @@
             "id": "5f222861-9b41-4b4f-b6da-3f19a6716164",
             "actions": [
                 {
-                    "name": "UpAction",
+                    "name": "Unpause",
                     "type": "Button",
-                    "id": "0324284a-d049-4d12-8365-e80d9e8ee366",
+                    "id": "887b833b-fe91-417b-90d7-b2663a223362",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -238,12 +238,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "3100b537-db5f-48df-bc15-01577962b912",
-                    "path": "<Keyboard>/upArrow",
+                    "id": "fbf41838-df99-4881-a938-09acdf7152ca",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "UpAction",
+                    "action": "Unpause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

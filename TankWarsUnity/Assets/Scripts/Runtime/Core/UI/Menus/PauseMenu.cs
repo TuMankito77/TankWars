@@ -1,7 +1,6 @@
 namespace TankWars.Runtime.Core.UI.Menus
 {
-    using System.Collections;
-    using System.Collections.Generic;
+    using InputSystem;
     using TankWars.Runtime.Core.Events;
     using TankWars.Runtime.Core.ManagerSystem;
     using TankWars.Runtime.Core.UI.Buttons;
@@ -25,7 +24,9 @@ namespace TankWars.Runtime.Core.UI.Menus
         [SerializeField]
         private SliderButton soundEffectsVolume = null;
 
-        private GameManager GameManager => CoreManagers.Instance.GetManager<GameManager>(); 
+        private PlayerPauseMenuInput playerPauseMenuInput = null;
+
+        private GameManager GameManager => CoreManagers.Instance.GetManager<GameManager>();
 
         #region Unity Methods
 
@@ -33,7 +34,8 @@ namespace TankWars.Runtime.Core.UI.Menus
         {
             continueButton.onButtonPressed += OnContinueButtonPressed;
             restartButton.onButtonPressed += OnRestartButtonPressed;
-            quitButton.onButtonPressed += OnQuitButtonPressed; 
+            quitButton.onButtonPressed += OnQuitButtonPressed;
+            playerPauseMenuInput = new PlayerPauseMenuInput();
         }
 
         private void OnDestroy()
@@ -49,7 +51,14 @@ namespace TankWars.Runtime.Core.UI.Menus
         {
             base.InitializeMenu();
             musicVolume.SetSliderValue(GameManager.GameInformation.MusicVolume);
-            soundEffectsVolume.SetSliderValue(GameManager.GameInformation.SoundEffectsVolume); 
+            soundEffectsVolume.SetSliderValue(GameManager.GameInformation.SoundEffectsVolume);
+            playerPauseMenuInput.Enable();
+        }
+
+        public override void TerminateMenu()
+        {
+            base.TerminateMenu();
+            playerPauseMenuInput.Disable();
         }
 
         private void OnContinueButtonPressed()
