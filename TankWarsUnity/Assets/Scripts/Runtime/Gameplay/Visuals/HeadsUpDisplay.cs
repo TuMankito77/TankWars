@@ -11,7 +11,7 @@ namespace TankWars.Runtime.Gameplay.Visuals
 
     public class HeadsUpDisplay : BaseMenu, IEventListener
     {
-        private const int IMAGE_FILL_ORIGIN_RIGHT = 1;
+        private const int IMAGE_FILL_ORIGIN_LEFT = 0;
         private const float IMAGE_FILL_VALUE_FILLED = 1f; 
         private const float GAME_OVER_MASSAGE_ANIMATION_DURATION = 5; 
 
@@ -47,7 +47,7 @@ namespace TankWars.Runtime.Gameplay.Visuals
 
             healthBarImage.type = Image.Type.Filled;
             healthBarImage.fillMethod = Image.FillMethod.Horizontal;
-            healthBarImage.fillOrigin = IMAGE_FILL_ORIGIN_RIGHT; 
+            healthBarImage.fillOrigin = IMAGE_FILL_ORIGIN_LEFT; 
         }
 
         #endregion
