@@ -53,6 +53,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""bb842790-f543-494c-93b9-acc75fe01442"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -209,6 +218,28 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""50cf9a2a-0e65-488e-89b8-ad9040413622"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""92e23ff3-8e5c-47c8-b1bb-399c5e718053"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -248,6 +279,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_VehicleControl_Movement = m_VehicleControl.FindAction("Movement", throwIfNotFound: true);
         m_VehicleControl_Aiming = m_VehicleControl.FindAction("Aiming", throwIfNotFound: true);
         m_VehicleControl_Fire = m_VehicleControl.FindAction("Fire", throwIfNotFound: true);
+        m_VehicleControl_Pause = m_VehicleControl.FindAction("Pause", throwIfNotFound: true);
         // PauseMenuControl
         m_PauseMenuControl = asset.FindActionMap("PauseMenuControl", throwIfNotFound: true);
         m_PauseMenuControl_UpAction = m_PauseMenuControl.FindAction("UpAction", throwIfNotFound: true);
@@ -315,6 +347,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_VehicleControl_Movement;
     private readonly InputAction m_VehicleControl_Aiming;
     private readonly InputAction m_VehicleControl_Fire;
+    private readonly InputAction m_VehicleControl_Pause;
     public struct VehicleControlActions
     {
         private @InputActions m_Wrapper;
@@ -322,6 +355,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_VehicleControl_Movement;
         public InputAction @Aiming => m_Wrapper.m_VehicleControl_Aiming;
         public InputAction @Fire => m_Wrapper.m_VehicleControl_Fire;
+        public InputAction @Pause => m_Wrapper.m_VehicleControl_Pause;
         public InputActionMap Get() { return m_Wrapper.m_VehicleControl; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -340,6 +374,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Fire.started += instance.OnFire;
             @Fire.performed += instance.OnFire;
             @Fire.canceled += instance.OnFire;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IVehicleControlActions instance)
@@ -353,6 +390,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Fire.started -= instance.OnFire;
             @Fire.performed -= instance.OnFire;
             @Fire.canceled -= instance.OnFire;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IVehicleControlActions instance)
@@ -421,6 +461,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnAiming(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IPauseMenuControlActions
     {

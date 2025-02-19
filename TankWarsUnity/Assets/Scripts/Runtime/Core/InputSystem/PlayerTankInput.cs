@@ -7,6 +7,8 @@ namespace InputSystem
     using UnityEngine.InputSystem;
     using TankWars.Runtime.Gameplay.Player;
     using TankWars.Runtime.Gameplay.Vehicles;
+    using TankWars.Runtime.Core.UI;
+    using TankWars.Runtime.Core.UI.Menus;
 
     public class PlayerTankInput : MonoBehaviour, IEventListener
     {
@@ -25,6 +27,7 @@ namespace InputSystem
             playerInput = new InputActions(); 
             playerInput.VehicleControl.Enable();
             playerInput.VehicleControl.Fire.performed += OnPlayerInputFire;
+            playerInput.VehicleControl.Pause.performed += OnPlayerInputPause;
             EventManager.Instance.Register(this, typeof(PlayerGameplayEvents), typeof(GameplayEvent));
         }
 
@@ -59,6 +62,12 @@ namespace InputSystem
         private void OnPlayerInputFire(InputAction.CallbackContext context)
         {
             tank.Fire(); 
+        }
+
+        private void OnPlayerInputPause(InputAction.CallbackContext context)
+        {
+            EventManager.Instance.Dispatch(GameplayEvent.OnGamePaused, null);
+            EventManager.Instance.Dispatch(UIEvent.ShowMenu, typeof(PauseMenu));
         }
 
         #region IEventListener

@@ -136,6 +136,26 @@ namespace TankWars.Runtime.Core.UI
                         break; 
                     }
 
+                case UIEvent.ShowMenu:
+                    {
+                        Type menuType = data as Type;
+
+                        foreach(BaseMenu menu in menus)
+                        {
+                            if(menu.GetType() == menuType)
+                            {
+                                currentMenuOpen.TransitionOut();
+                                currentMenuOpen.TerminateMenu();
+                                currentMenuOpen = menu;
+                                currentMenuOpen.InitializeMenu();
+                                currentMenuOpen.TransitionIn();
+                                currentMenuOpen.SetFirstMenuButtonSelected();
+                            }
+                        }
+
+                        break;
+                    }
+
                 default:
                     {
                         break; 
