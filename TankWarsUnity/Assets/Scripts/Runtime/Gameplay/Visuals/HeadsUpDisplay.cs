@@ -32,13 +32,13 @@ namespace TankWars.Runtime.Gameplay.Visuals
         private void Start()
         {
             EventManager.Instance.Register(this, typeof(PlayerGameplayEvents)); 
-            pauseButton.onButtonPressed += OnPuaseButtonPressed; 
+            pauseButton.onButtonPressed += OnPauseButtonPressed; 
         }
 
         private void OnDestroy()
         {
             EventManager.Instance.Unregister(this, typeof(PlayerGameplayEvents)); 
-            pauseButton.onButtonPressed -= OnPuaseButtonPressed; 
+            pauseButton.onButtonPressed -= OnPauseButtonPressed; 
         }
 
         private void OnValidate()
@@ -59,7 +59,7 @@ namespace TankWars.Runtime.Gameplay.Visuals
             healthBarImage.fillAmount = IMAGE_FILL_VALUE_FILLED;
         }
 
-        private void OnPuaseButtonPressed()
+        private void OnPauseButtonPressed()
         {
             EventManager.Instance.Dispatch(GameplayEvent.OnGamePaused, null); 
         }
@@ -111,7 +111,9 @@ namespace TankWars.Runtime.Gameplay.Visuals
 
                 case PlayerGameplayEvents.HasDied:
                     {
-                        StartCoroutine(ShowGameOverMessage(playerGameplayInformation)); 
+                        StartCoroutine(ShowGameOverMessage(playerGameplayInformation));
+                        pauseButton.SetButtonInteractable(false);
+                        pauseButton.onButtonPressed -= OnPauseButtonPressed;
                         break; 
                     }
 
