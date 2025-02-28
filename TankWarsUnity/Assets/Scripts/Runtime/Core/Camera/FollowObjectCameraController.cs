@@ -1,6 +1,5 @@
 namespace TankWars.Runtime.Core.Camera
 {
-    using System.Collections;
     using UnityEngine;
 
     public class FollowObjectCameraController : MonoBehaviour
@@ -32,15 +31,19 @@ namespace TankWars.Runtime.Core.Camera
                 return; 
             }
 
-            float distanceToTarget = Vector3.Distance(target.transform.position + offset, transform.position);
+            Vector3 localOffset = transform.right * offset.x +
+                                  transform.up * offset.y +
+                                  transform.forward * offset.z;
+
+            float distanceToTarget = Vector3.Distance(target.transform.position + localOffset, transform.position);
 
             if (distanceToTarget > acceptableRange)
             {
-                transform.position = Vector3.Lerp(transform.position, target.transform.position + offset, lerpSpeed * Time.deltaTime);
+                transform.position = Vector3.Lerp(transform.position, target.transform.position + localOffset, lerpSpeed * Time.deltaTime);
             }
             else
             {
-                transform.position = target.transform.position + offset; 
+                transform.position = target.transform.position + localOffset; 
             }
         }
 
