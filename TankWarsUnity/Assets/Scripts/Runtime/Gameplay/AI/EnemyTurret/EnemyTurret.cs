@@ -8,15 +8,12 @@ namespace TankWars.Runtime.Gameplay.AI.EnemyTurret
     using TankWars.Runtime.Gameplay.Vehicles;
     using UnityEngine;
 
-    public class EnemyTurret : MonoBehaviour, IEventListener
+    public class EnemyTurret : BaseEnemy, IEventListener
     {
         public event Action onTargetFound = null;
 
         [SerializeField]
         private GunTurret gunTurret = null;
-
-        [SerializeField]
-        private SphereCollider sightArea = null;
 
         [SerializeField, Min(1f)]
         private float fireDelay = 1f;
@@ -50,11 +47,11 @@ namespace TankWars.Runtime.Gameplay.AI.EnemyTurret
             {
                 float distanceToTarget = Vector3.Distance(transform.position, playerTank.transform.position);
 
-                if (distanceToTarget < sightArea.radius && !targetsInSight.Contains(playerTank.gameObject))
+                if (distanceToTarget < attackingDistance && !targetsInSight.Contains(playerTank.gameObject))
                 {
                     targetsInSight.Add(playerTank.gameObject);
                 }
-                else if (distanceToTarget >= sightArea.radius && targetsInSight.Contains(playerTank.gameObject))
+                else if (distanceToTarget >= attackingDistance && targetsInSight.Contains(playerTank.gameObject))
                 {
                     targetsInSight.Remove(playerTank.gameObject);
                 }

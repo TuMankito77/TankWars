@@ -11,19 +11,13 @@ namespace TankWars.Runtime.Gameplay.AI.EnemyTank
     using System;
     using TankWars.Runtime.Gameplay.Enemy;
 
-    public class EnemyTankAI : MonoBehaviour, IEventListener
+    public class EnemyTankAI : BaseEnemy, IEventListener
     {
         [SerializeField, Min(0.1f)]
         private float pathFolowingAccuracy = 0.1f;
 
-        [SerializeField, Min(1f)]
-        private float attackingDistance = 3f;
-
         [SerializeField]
         private float pursuingDistance = 5f;
-
-        [SerializeField]
-        private bool drawDebugSpeheres = false; 
 
         [SerializeField]
         private Transform[] patrolPoints = null;
@@ -132,12 +126,12 @@ namespace TankWars.Runtime.Gameplay.AI.EnemyTank
             pursuingDistance = Mathf.Max(pursuingDistance, attackingDistance); 
         }
 
-        private void OnDrawGizmos()
+        protected override void OnDrawGizmos()
         {
-            if (!drawDebugSpeheres) return; 
+            base.OnDrawGizmos();
             
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, attackingDistance);
+            if (!drawDebugSpeheres) return; 
+
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, pursuingDistance);
 
